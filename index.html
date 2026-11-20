@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kader Posyandu Desa Labuhan Ijuk</title>
+  <meta name="description" content="Website resmi Kader Posyandu Desa Labuhan Ijuk, Kecamatan Moyo Hilir, Kabupaten Sumbawa, NTB.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-in">
+    <a href="#beranda" class="logo">🌿 Posyandu <span>Labuhan Ijuk</span></a>
+    <button id="menuBtn" aria-label="Menu">☰</button>
+    <nav id="menu">
+      <a href="#tentang">Tentang</a>
+      <a href="#layanan">Layanan</a>
+      <a href="#jadwal">Jadwal</a>
+      <a href="berita.html">Berita</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#kader">Kader</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </div>
+</header>
+
+<section id="beranda" class="hero">
+  <div class="container">
+    <p class="tag">Desa Labuhan Ijuk · Moyo Hilir · Sumbawa</p>
+    <h1>Kader Posyandu<br>Desa Labuhan Ijuk</h1>
+    <p>Bersama menjaga kesehatan ibu, balita, remaja, dan lansia demi desa yang sehat dan sejahtera.</p>
+    <a class="btn" href="#jadwal">Lihat Jadwal</a>
+    <a class="btn ghost" href="#kontak">Hubungi Kami</a>
+  </div>
+</section>
+
+<div id="banner" class="banner"></div>
+
+<section class="stats container">
+  <div><b>5</b><span>Pos Layanan</span></div>
+  <div><b>12</b><span>Kader Aktif</span></div>
+  <div><b>120+</b><span>Balita Terlayani</span></div>
+  <div><b>Bulanan</b><span>Kegiatan Rutin</span></div>
+</section>
+
+<section id="tentang" class="container sec">
+  <h2>Tentang Kami</h2>
+  <p>Kader Posyandu Desa Labuhan Ijuk adalah relawan masyarakat yang melayani pemantauan tumbuh kembang balita, kesehatan ibu hamil dan menyusui, imunisasi, gizi, serta kesehatan lansia. Kami bekerja bersama Pemerintah Desa dan Puskesmas setempat.</p>
+</section>
+
+<section id="layanan" class="sec alt">
+  <div class="container">
+    <h2>Layanan Posyandu</h2>
+    <div class="grid">
+      <article class="card"><h3>👶 Balita</h3><p>Penimbangan, pengukuran tinggi badan, pemantauan gizi, dan imunisasi.</p></article>
+      <article class="card"><h3>🤰 Ibu Hamil</h3><p>Pemeriksaan kehamilan, tablet tambah darah, dan konsultasi kesehatan ibu.</p></article>
+      <article class="card"><h3>🧒 Remaja</h3><p>Edukasi kesehatan remaja, gizi seimbang, dan pencegahan anemia.</p></article>
+      <article class="card"><h3>👴 Lansia</h3><p>Cek tekanan darah, gula darah, dan senam sehat lansia.</p></article>
+      <article class="card"><h3>🥗 Gizi &amp; PMT</h3><p>Pemberian makanan tambahan dan penyuluhan gizi keluarga.</p></article>
+      <article class="card"><h3>📋 Pencatatan</h3><p>Pencatatan hasil layanan di buku KIA dan laporan bulanan.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="jadwal" class="container sec">
+  <h2>Jadwal Kegiatan</h2>
+  <p class="note">Tanggal dihitung otomatis dari aturan jadwal di data.js.</p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Kegiatan</th><th>Hari / Tanggal</th><th>Waktu</th><th>Lokasi</th></tr></thead>
+      <tbody id="jadwalBody"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="berita" class="container sec">
+  <h2>Berita Terbaru</h2>
+  <div class="grid" id="beritaPreview"></div>
+  <p style="margin-top:16px"><a class="btn" href="berita.html">Semua Berita</a></p>
+</section>
+
+<section id="galeri" class="sec alt">
+  <div class="container">
+    <h2>Galeri Kegiatan</h2>
+    <p class="note">Klik foto untuk memperbesar.</p>
+    <div class="gallery" id="galeriList"></div>
+  </div>
+</section>
+
+<section id="kader" class="sec alt">
+  <div class="container">
+    <h2>Daftar Kader</h2>
+    <p class="note">Nama di bawah adalah contoh. Ganti dengan data kader asli.</p>
+    <div class="grid" id="kaderList"></div>
+  </div>
+</section>
+
+<section id="kontak" class="container sec">
+  <h2>Kontak &amp; Pesan</h2>
+  <div class="contact">
+    <div>
+      <p>📍 Kantor Desa Labuhan Ijuk, Kec. Moyo Hilir, Kab. Sumbawa, NTB</p>
+      <p>📞 08xx-xxxx-xxxx (ganti nomor)</p>
+      <p>🕗 Senin – Jumat, 08.00 – 15.00</p>
+    </div>
+    <div class="form">
+      <input id="nama" placeholder="Nama Anda">
+      <textarea id="pesan" rows="4" placeholder="Tulis pesan atau pertanyaan..."></textarea>
+      <button class="btn" id="kirim">Kirim via WhatsApp</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© <span id="tahun"></span> Kader Posyandu Desa Labuhan Ijuk. Semua hak dilindungi.</p>
+</footer>
+
+<div id="lightbox" class="lightbox"><img id="lbImg" alt=""></div>
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
